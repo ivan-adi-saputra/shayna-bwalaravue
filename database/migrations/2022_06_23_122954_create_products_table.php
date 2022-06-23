@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('type');
             $table->longText('description');
             $table->integer('price');
-            $table->integer('quantity');
+            $table->integer('quantity'); 
 
             $table->softDeletes();
             $table->timestamps();
