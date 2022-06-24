@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\Models\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -22,7 +21,7 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    use \Illuminate\Foundation\Auth\RegistersUsers;
 
     /**
      * Where to redirect users after registration.
