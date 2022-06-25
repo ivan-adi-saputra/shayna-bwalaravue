@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductGalleryController;
+use App\Models\ProductGalleries;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,8 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 
-Route::resource('products', ProductController::class);
+Route::resource('products', ProductController::class)->middleware('auth');
+
+Route::resource('product-galleries', ProductGalleryController::class)->middleware('auth');
 
 Auth::routes();
