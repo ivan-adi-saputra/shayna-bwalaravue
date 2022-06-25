@@ -32,7 +32,7 @@
                                         <a href="#" class="btn btn-info btn-sm">
                                             <i class="fa fa-picture-o"></i>
                                         </a>
-                                        <a href="/products/{{ $item->id }}/edit" class="btn btn-primary btn-sm">
+                                        <a href="{{ route('products.edit', $item->id) }}" class="btn btn-primary btn-sm">
                                             <i class="fa fa-pencil"></i>
                                         </a>
                                         <form action="/products/{{ $item->id }}" method="post" class="d-inline">
