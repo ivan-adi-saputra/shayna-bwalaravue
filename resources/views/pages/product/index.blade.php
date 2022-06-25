@@ -21,8 +21,8 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+                                @forelse ($items as $item)
                                 <tbody>
-                                    @forelse ($items as $item)
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->type }}</td>
@@ -49,8 +49,8 @@
                                                 Data tidak tersedia
                                             </td>
                                         </tr>
-                                    @endforelse
-                                </tbody>
+                                    </tbody>
+                                @endforelse
                             </table>
                         </div>
                     </div>
